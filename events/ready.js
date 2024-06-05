@@ -61,11 +61,7 @@ export default {
 		const DBURL = process.env['DBURL']
 		if(!DBURL) return;
 		mongoose.set('strictQuery', true)
-		mongoose.connect(DBURL, {
-			useNewUrlParser: true,
-			useUnifiedTopology: true,
-			keepAlive: true,
-		}).then(() => {
+		mongoose.connect(DBURL, {}).then(() => {
 			console.log("Bot connected to DB!")
 		}).catch((err) => {
 			console.log(err)
