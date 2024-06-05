@@ -1,6 +1,8 @@
 import { ActivityType } from 'discord.js';
 import mongoose from "mongoose";
 import userProfiles from '../models/userProfiles.js';
+import * as cheerio from "cheerio";
+
 
 const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
